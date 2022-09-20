@@ -4,9 +4,9 @@
 
 import time
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import google_key
-from geocoder.location import Location
+from .base import MultipleResultsQuery, OneResult
+from .keys import google_key
+from .location import Location
 
 
 class TimezoneResult(OneResult):

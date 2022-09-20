@@ -33,8 +33,8 @@ __copyright__ = "Copyright (c) 2013-2016 Denis Carriere"
 
 # EXTRAS
 # CORE
-from geocoder.api import gisgraphy  # noqa
-from geocoder.api import (
+from .api import gisgraphy  # noqa
+from .api import (
     arcgis,
     baidu,
     bing,
@@ -75,4 +75,4 @@ from geocoder.api import (
 )
 
 # CLI
-from geocoder.cli import cli  # noqa
+from .cli import cli  # noqa

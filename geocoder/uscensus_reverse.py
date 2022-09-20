@@ -3,9 +3,9 @@
 
 import logging
 
-from geocoder.base import OneResult
-from geocoder.location import Location
-from geocoder.uscensus import USCensusQuery
+from .base import OneResult
+from .location import Location
+from .uscensus import USCensusQuery
 
 
 class USCensusReverseResult(OneResult):

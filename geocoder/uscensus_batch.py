@@ -8,7 +8,7 @@ import sys
 
 import requests
 
-from geocoder.base import MultipleResultsQuery, OneResult
+from .base import MultipleResultsQuery, OneResult
 
 PY2 = sys.version_info < (3, 0)
 csv_io = io.BytesIO if PY2 else io.StringIO

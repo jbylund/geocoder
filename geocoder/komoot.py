@@ -4,8 +4,8 @@
 
 import logging
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.location import BBox
+from .base import MultipleResultsQuery, OneResult
+from .location import BBox
 
 
 class KomootResult(OneResult):

@@ -4,8 +4,8 @@
 
 import logging
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import gaode_key
+from .base import MultipleResultsQuery, OneResult
+from .keys import gaode_key
 
 
 class GaodeResult(OneResult):

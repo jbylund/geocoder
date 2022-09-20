@@ -3,8 +3,8 @@
 
 import logging
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import canadapost_key_getter
+from .base import MultipleResultsQuery, OneResult
+from .keys import canadapost_key_getter
 
 
 class CanadapostIdResult(OneResult):

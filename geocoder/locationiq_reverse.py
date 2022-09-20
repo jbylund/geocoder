@@ -2,7 +2,7 @@
 # coding: utf8
 
 
-from geocoder.locationiq import LocationIQQuery
+from .locationiq import LocationIQQuery
 
 
 class LocationIQReverse(LocationIQQuery):

@@ -4,9 +4,9 @@
 
 import logging
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import here_app_code, here_app_id
-from geocoder.location import BBox
+from .base import MultipleResultsQuery, OneResult
+from .keys import here_app_code, here_app_id
+from .location import BBox
 
 
 class HereResult(OneResult):

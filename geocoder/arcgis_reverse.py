@@ -3,9 +3,9 @@
 
 import logging
 
-from geocoder.arcgis import ArcgisQuery
-from geocoder.base import OneResult
-from geocoder.location import Location
+from .arcgis import ArcgisQuery
+from .base import OneResult
+from .location import Location
 
 
 class ArcgisReverseResult(OneResult):

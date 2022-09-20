@@ -2,8 +2,8 @@
 # coding: utf8
 
 
-from geocoder.location import Location
-from geocoder.mapquest import MapquestQuery, MapquestResult
+from .location import Location
+from .mapquest import MapquestQuery, MapquestResult
 
 
 class MapQuestReverseResult(MapquestResult):

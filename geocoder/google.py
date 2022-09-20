@@ -6,8 +6,8 @@ from collections import OrderedDict
 
 import ratelim
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import google_client, google_client_secret, google_key
+from .base import MultipleResultsQuery, OneResult
+from .keys import google_client, google_client_secret, google_key
 
 
 class GoogleResult(OneResult):

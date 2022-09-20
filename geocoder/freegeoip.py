@@ -7,8 +7,8 @@ import logging
 import ratelim
 import requests
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import freegeoip_key
+from .base import MultipleResultsQuery, OneResult
+from .keys import freegeoip_key
 
 
 class FreeGeoIPResult(OneResult):

@@ -1,4 +1,4 @@
-from geocoder.geonames import GeonamesQuery
+from .geonames import GeonamesQuery
 
 
 class GeonamesChildren(GeonamesQuery):

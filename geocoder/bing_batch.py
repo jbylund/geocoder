@@ -9,8 +9,8 @@ import time
 
 import requests
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import bing_key
+from .base import MultipleResultsQuery, OneResult
+from .keys import bing_key
 
 PY2 = sys.version_info < (3, 0)
 csv_io = io.BytesIO if PY2 else io.StringIO

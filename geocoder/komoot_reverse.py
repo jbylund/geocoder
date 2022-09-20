@@ -4,8 +4,8 @@
 
 import logging
 
-from geocoder.komoot import KomootQuery, KomootResult
-from geocoder.location import Location
+from .komoot import KomootQuery, KomootResult
+from .location import Location
 
 
 class KomootReverseResult(KomootResult):

@@ -1,4 +1,4 @@
-from geocoder.geonames import GeonamesQuery, GeonamesResult
+from .geonames import GeonamesQuery, GeonamesResult
 
 
 class GeonamesFullResult(GeonamesResult):

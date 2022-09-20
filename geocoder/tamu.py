@@ -4,8 +4,8 @@
 
 import logging
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import tamu_key
+from .base import MultipleResultsQuery, OneResult
+from .keys import tamu_key
 
 
 class TamuResult(OneResult):

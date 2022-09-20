@@ -4,8 +4,8 @@
 import json
 import logging
 
-from geocoder.keys import locationiq_key
-from geocoder.osm import OsmQuery, OsmResult
+from .keys import locationiq_key
+from .osm import OsmQuery, OsmResult
 
 
 class LocationIQResult(OsmResult):

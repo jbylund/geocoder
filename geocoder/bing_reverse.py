@@ -2,8 +2,8 @@
 # coding: utf8
 
 
-from geocoder.bing import BingQuery, BingResult
-from geocoder.location import Location
+from .bing import BingQuery, BingResult
+from .location import Location
 
 
 class BingReverseResult(BingResult):

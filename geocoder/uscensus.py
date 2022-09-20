@@ -4,7 +4,7 @@
 import logging
 import re
 
-from geocoder.base import MultipleResultsQuery, OneResult
+from .base import MultipleResultsQuery, OneResult
 
 
 class USCensusResult(OneResult):

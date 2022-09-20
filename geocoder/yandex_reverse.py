@@ -4,8 +4,8 @@
 
 import logging
 
-from geocoder.location import Location
-from geocoder.yandex import YandexQuery, YandexResult
+from .location import Location
+from .yandex import YandexQuery, YandexResult
 
 
 class YandexReverseResult(YandexResult):

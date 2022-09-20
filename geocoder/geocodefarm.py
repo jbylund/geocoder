@@ -3,8 +3,8 @@
 
 import logging
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import geocodefarm_key
+from .base import MultipleResultsQuery, OneResult
+from .keys import geocodefarm_key
 
 
 class GeocodeFarmResult(OneResult):

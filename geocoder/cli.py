@@ -1,39 +1,39 @@
 #!/usr/bin/python
 # coding: utf8
-
-
+import argparse
 import fileinput
 import json
 import os
 
-import click
+from .api import options
 
-import geocoder
-from geocoder.api import options
-
-providers = sorted(options.keys())
+providers = sorted(options)
 methods = ["geocode", "reverse", "elevation", "timezone", "places"]
 outputs = ["json", "osm", "geojson", "wkt"]
 units = ["kilometers", "miles", "feet", "meters"]
 
 
-@click.command()
-@click.argument("location", nargs=-1)
-@click.option("--provider", "-p", default="osm", type=click.Choice(providers))
-@click.option("--method", "-m", default="geocode", type=click.Choice(methods))
-@click.option("--output", "-o", default="json", type=click.Choice(outputs))
-@click.option("--units", "-u", default="kilometers", type=click.Choice(units))
-@click.option("--timeout", "-t", default=5.0)
-@click.option("--distance", is_flag=True)
-@click.option("--language", default="")
-@click.option("--url", default="")
-@click.option("--proxies")
-@click.option("--key")
-# following are for Tamu provider
-@click.option("--city", "-c", default="")
-@click.option("--state", "-s", default="")
-@click.option("--zipcode", "-z", default="")
-def cli(location, **kwargs):
+def get_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("location")
+    parser.add_argument("--provider", "-p", default="osm", choices=providers)
+    parser.add_argument("--method", "-m", default="geocode", choices=methods)
+    parser.add_argument("--output", "-o", default="json", choices=outputs)
+    parser.add_argument("--units", "-u", default="kilometers", choices=units)
+    parser.add_argument("--timeout", "-t", default=5.0)
+    parser.add_argument("--distance", is_flag=True)
+    parser.add_argument("--language", default="")
+    parser.add_argument("--url", default="")
+    parser.add_argument("--proxies")
+    parser.add_argument("--key")
+    # following are for Tamu provider
+    parser.add_argument("--city", "-c", default="")
+    parser.add_argument("--state", "-s", default="")
+    parser.add_argument("--zipcode", "-z", default="")
+    return vars(parser.parse_args())
+
+
+def cli():
     """Geocode an arbitrary number of strings from Command Line."""
 
     locations = []
@@ -57,14 +57,14 @@ def cli(location, **kwargs):
     # Distance calculation
     if kwargs["distance"]:
         d = geocoder.distance(locations, **kwargs)
-        click.echo(d)
+        print(d)
         return
 
     # Geocode results from user input
     for location in locations:
         g = geocoder.get(location.strip(), **kwargs)
         try:
-            click.echo(json.dumps(getattr(g, kwargs["output"])))
+            print(json.dumps(getattr(g, kwargs["output"])))
         except IOError:
             # When invalid command is entered a broken pipe error occurs
             return

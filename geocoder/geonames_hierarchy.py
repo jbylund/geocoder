@@ -1,4 +1,4 @@
-from geocoder.geonames_children import GeonamesChildren
+from .geonames_children import GeonamesChildren
 
 
 class GeonamesHierarchy(GeonamesChildren):

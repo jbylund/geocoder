@@ -3,8 +3,6 @@
 
 import re
 
-from six import string_types
-
 import geocoder
 
 try:
@@ -39,7 +37,7 @@ class Location(object):
 
     def _check_input(self, location):
         # Checking for a LatLng String
-        if isinstance(location, string_types):
+        if isinstance(location, str):
             expression = r"[-]?\d+[.]?[-]?[\d]+"
             pattern = re.compile(expression)
             match = pattern.findall(location)

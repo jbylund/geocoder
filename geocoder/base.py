@@ -13,7 +13,7 @@ from urllib.parse import urlparse
 
 import requests
 
-from geocoder.distance import Distance  # noqa
+from .distance import Distance  # noqa
 
 LOGGER = logging.getLogger(__name__)
 

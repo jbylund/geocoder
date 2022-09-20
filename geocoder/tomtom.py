@@ -4,9 +4,9 @@
 
 import logging
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import tomtom_key
-from geocoder.location import BBox
+from .base import MultipleResultsQuery, OneResult
+from .keys import tomtom_key
+from .location import BBox
 
 
 class TomtomResult(OneResult):

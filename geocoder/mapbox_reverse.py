@@ -2,8 +2,8 @@
 # coding: utf8
 
 
-from geocoder.location import Location
-from geocoder.mapbox import MapboxQuery, MapboxResult
+from .location import Location
+from .mapbox import MapboxQuery, MapboxResult
 
 
 class MapboxReverseResult(MapboxResult):

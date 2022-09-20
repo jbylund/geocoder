@@ -4,8 +4,8 @@
 
 import logging
 
-from geocoder.location import Location
-from geocoder.opencage import OpenCageQuery, OpenCageResult
+from .location import Location
+from .opencage import OpenCageQuery, OpenCageResult
 
 
 class OpenCageReverseResult(OpenCageResult):

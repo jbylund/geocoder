@@ -2,8 +2,8 @@
 # coding: utf8
 
 
-from geocoder.location import Location
-from geocoder.osm import OsmQuery
+from .location import Location
+from .osm import OsmQuery
 
 
 class OsmReverse(OsmQuery):

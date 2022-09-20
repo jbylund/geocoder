@@ -4,8 +4,8 @@
 
 import re
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import bing_key
+from .base import MultipleResultsQuery, OneResult
+from .keys import bing_key
 
 
 class BingResult(OneResult):

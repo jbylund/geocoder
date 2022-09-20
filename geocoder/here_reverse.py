@@ -2,8 +2,8 @@
 # coding: utf8
 
 
-from geocoder.here import HereQuery, HereResult
-from geocoder.location import Location
+from .here import HereQuery, HereResult
+from .location import Location
 
 
 class HereReverseResult(HereResult):

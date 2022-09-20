@@ -3,9 +3,9 @@
 
 import logging
 
-from geocoder.baidu import BaiduQuery
-from geocoder.base import OneResult
-from geocoder.location import Location
+from .baidu import BaiduQuery
+from .base import OneResult
+from .location import Location
 
 
 class BaiduReverseResult(OneResult):

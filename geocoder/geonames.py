@@ -5,9 +5,9 @@
 import json
 import logging
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import geonames_username
-from geocoder.location import BBox
+from .base import MultipleResultsQuery, OneResult
+from .keys import geonames_username
+from .location import BBox
 
 LOGGER = logging.getLogger(__name__)
 

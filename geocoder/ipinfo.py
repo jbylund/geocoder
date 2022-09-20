@@ -4,8 +4,8 @@
 
 import logging
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.location import Location
+from .base import MultipleResultsQuery, OneResult
+from .location import Location
 
 
 class IpinfoResult(OneResult):

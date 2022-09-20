@@ -4,8 +4,8 @@
 
 import logging
 
-from geocoder.gisgraphy import GisgraphyQuery, GisgraphyResult
-from geocoder.location import Location
+from .gisgraphy import GisgraphyQuery, GisgraphyResult
+from .location import Location
 
 
 class GisgraphyReverseResult(GisgraphyResult):

@@ -3,8 +3,8 @@
 
 import logging
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import w3w_key
+from .base import MultipleResultsQuery, OneResult
+from .keys import w3w_key
 
 
 class W3WResult(OneResult):

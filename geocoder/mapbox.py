@@ -2,9 +2,9 @@
 # coding: utf8
 
 
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import mapbox_access_token
-from geocoder.location import BBox, Location
+from .base import MultipleResultsQuery, OneResult
+from .keys import mapbox_access_token
+from .location import BBox, Location
 
 
 class MapboxResult(OneResult):

@@ -4,9 +4,9 @@
 
 import logging
 
-from geocoder.base import OneResult
-from geocoder.gaode import GaodeQuery
-from geocoder.location import Location
+from .base import OneResult
+from .gaode import GaodeQuery
+from .location import Location
 
 
 class GaodeReverseResult(OneResult):

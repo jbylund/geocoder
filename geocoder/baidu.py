@@ -6,10 +6,8 @@ import logging
 import re
 from collections import OrderedDict
 
-import six
-
-from geocoder.base import MultipleResultsQuery, OneResult
-from geocoder.keys import baidu_key, baidu_security_key
+from .base import MultipleResultsQuery, OneResult
+from .keys import baidu_key, baidu_security_key
 
 
 class BaiduResult(OneResult):
@@ -90,10 +88,7 @@ class BaiduQuery(MultipleResultsQuery):
         """
         import hashlib
 
-        if six.PY3:
-            from urllib.parse import quote, quote_plus, urlencode
-        else:
-            from urllib import quote, quote_plus, urlencode
+        from urllib.parse import quote, quote_plus, urlencode
 
         if not base_url or not self.security_key:
             return None

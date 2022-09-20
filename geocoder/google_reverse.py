@@ -2,8 +2,8 @@
 # coding: utf8
 
 
-from geocoder.google import GoogleQuery, GoogleResult
-from geocoder.location import Location
+from .google import GoogleQuery, GoogleResult
+from .location import Location
 
 
 class GoogleReverseResult(GoogleResult):

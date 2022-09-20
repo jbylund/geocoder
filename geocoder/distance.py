@@ -4,7 +4,7 @@
 
 from math import asin, cos, radians, sin, sqrt
 
-from geocoder.location import Location
+from .location import Location
 
 AVG_EARTH_RADIUS = 6371  # in km
 

@@ -3,8 +3,8 @@
 
 import logging
 
-from geocoder.geocodefarm import GeocodeFarmQuery
-from geocoder.location import Location
+from .geocodefarm import GeocodeFarmQuery
+from .location import Location
 
 
 class GeocodeFarmReverse(GeocodeFarmQuery):
