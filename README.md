@@ -1,45 +1,5 @@
-<!-- markdownlint-disable -->
-<h1 align="center" style="margin:1em">
-  <a href="https://geocoder.readthedocs.org/">
-    <img src="https://github.com/jbylund/geocoder/raw/main/docs/_static/geocoder.png"
-         alt="Markdownify"
-         width="200"></a>
-  <br />
-  Python Geocoder
-</h1>
-
-<h4 align="center">
-  Simple and consistent geocoding library written in Python.
-</h4>
-
-<p align="center">
-  <a href="http://geocoder.readthedocs.io/?badge=master">
-    <img src="https://readthedocs.org/projects/geocoder/badge/?version=master"
-         alt="RDT">
-  </a>
-  <a href="https://pypi.python.org/pypi/geocoder">
-    <img src="https://img.shields.io/pypi/v/geocoder.svg"
-         alt="PyPi">
-  </a>
-  <a href="https://build.snapcraft.io/user/jbylund/geocoder">
-    <img src="https://build.snapcraft.io/badge/jbylund/geocoder.svg"
-         alt="Snap">
-  </a>
-  <a href="https://travis-ci.org/jbylund/geocoder">
-    <img src="https://travis-ci.org/jbylund/geocoder.svg?branch=master"
-         alt="Travis">
-  </a>
-  <a href="https://codecov.io/gh/jbylund/geocoder">
-    <img src="https://codecov.io/gh/jbylund/geocoder/branch/main/graph/badge.svg"
-         alt="Codecov" />
-  </a>
-</p>
-<br>
-
-Table of content
-----------------
-
-<!-- TOC -->
+# Geocoder
+A simple and consistent geocoding library for python.
 
 - [Overview](#overview)
 - [A glimpse at the API](#a-glimpse-at-the-api)
@@ -61,19 +21,13 @@ Table of content
     - [Coding](#coding)
 - [ChangeLog](#changelog)
 
-<!-- /TOC -->
-
 ## Overview
 
-Many online providers such as Google & Bing have geocoding services,
-these providers do not include Python libraries and have different
-JSON responses between each other.
+Many online providers such as Google & Bing have geocoding services, these providers do not include Python libraries and have different JSON responses between each other.
 
-It can be very difficult sometimes to parse a particular geocoding provider
-since each one of them have their own JSON schema.
+It can be very difficult sometimes to parse a particular geocoding provider since each one of them have their own JSON schema.
 
-Here is a typical example of retrieving a Lat & Lng from Google using Python,
-things shouldn't be this hard.
+Here is a typical example of retrieving a Lat & Lng from Google using Python, things shouldn't be this hard.
 
 ```python
 >>> import requests
@@ -255,31 +209,6 @@ $ python setup.py install
 ...
 ```
 
-### Snap Install
-
-To install the stable geocoder [snap](https://snapcraft.io) in any of the [supported Linux distros](https://snapcraft.io/docs/core/install):
-
-```bash
-$ sudo snap install geocoder
-...
-```
-
-If you want to help testing the latest changes from the master branch, you can install it from the edge channel:
-
-```bash
-$ sudo snap install geocoder --edge
-...
-```
-
-The installed snap will be updated automatically every time a new version is pushed to the store.
-
-
-## Feedback
-
-Please feel free to give any feedback on this module.
-
-Speak up on Twitter [@DenisCarriere](https://twitter.com/DenisCarriere) and tell me how you use this Python Geocoder. New updates will be pushed to Twitter Hashtags [#python](https://twitter.com/search?q=%23python).
-
 ## Contribution
 
 If you find any bugs or any enhancements to recommend please send some of your comments/suggestions to the [Github Issues Page](https://github.com/jbylund/geocoder/issues).
@@ -294,7 +223,8 @@ If you are not comfortable with development, you can still contribute with the d
 - review the parameters for a specific method, compared to what is supported by the provider
 - review documentation for command line
 
-If you miss any feature, just create an issue accordingly. Be sure to describe your use case clearly, and to provide links to the correct sources.
+If you miss any feature, just create an issue accordingly.
+Be sure to describe your use case clearly, and to provide links to the correct sources.
 
 ### Coding
 
@@ -308,37 +238,37 @@ If you miss any feature, just create an issue accordingly. Be sure to describe y
 See [CHANGELOG.md](./CHANGELOG.md)
 
 
-[TGOS]: http://geocoder.readthedocs.org/providers/TGOS.html
-[Mapbox]: http://geocoder.readthedocs.org/providers/Mapbox.html
-[Google]: http://geocoder.readthedocs.org/providers/Google.html
-[G-Policy]: https://developers.google.com/maps/documentation/geocoding/usage-limits
-[Bing]: http://geocoder.readthedocs.org/providers/Bing.html
-[LocationIQ]: http://geocoder.readthedocs.org/providers/LocationIQ.html
-[OpenStreetMap]: http://geocoder.readthedocs.org/providers/OpenStreetMap.html
-[OpenStreetMap-Policy]: https://operations.osmfoundation.org/policies/nominatim/
-[HERE]: http://geocoder.readthedocs.org/providers/HERE.html
-[TomTom]: http://geocoder.readthedocs.org/providers/TomTom.html
-[MapQuest]: http://geocoder.readthedocs.org/providers/MapQuest.html
-[OpenCage]: http://geocoder.readthedocs.org/providers/OpenCage.html
-[Yahoo]: http://geocoder.readthedocs.org/providers/Yahoo.html
 [ArcGIS]: http://geocoder.readthedocs.org/providers/ArcGIS.html
-[Yandex]: http://geocoder.readthedocs.org/providers/Yandex.html
-[Geocoder.ca]: http://geocoder.readthedocs.org/providers/Geocoder-ca.html
 [Baidu]: http://geocoder.readthedocs.org/providers/Baidu.html
-[GeoOttawa]: http://geocoder.readthedocs.org/providers/GeoOttawa.html
+[Bing]: http://geocoder.readthedocs.org/providers/Bing.html
+[CanadaPost]: http://geocoder.readthedocs.org/providers/CanadaPost.html
 [FreeGeoIP]: http://geocoder.readthedocs.org/providers/FreeGeoIP.html
 [FreeGeoip-Policy]: https://github.com/apilayer/freegeoip#readme
-[MaxMind]: http://geocoder.readthedocs.org/providers/MaxMind.html
-[Mapzen]: https://mapzen.com/blog/shutdown
-[What3Words]: http://geocoder.readthedocs.org/providers/What3Words.html
-[CanadaPost]: http://geocoder.readthedocs.org/providers/CanadaPost.html
-[GeoNames]: http://geocoder.readthedocs.org/providers/GeoNames.html
-[IPInfo]: http://geocoder.readthedocs.org/providers/IPInfo.html
-[Tamu]: http://geoservices.tamu.edu/Services/Geocode/WebService/
-[GeocodeFarm]: https://geocode.farm/
-[GeocodeFarm-Policy]: https://geocode.farm/geocoding/free-api-documentation/
+[G-Policy]: https://developers.google.com/maps/documentation/geocoding/usage-limits
 [Gaode]: http://geocoder.readthedocs.org/providers/.html
-[IP-Plans]: http://ipinfo.io/pricing
-[Komoot]: http://photon.komoot.de
-[USCensus]: https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html
+[GeoNames]: http://geocoder.readthedocs.org/providers/GeoNames.html
+[GeoOttawa]: http://geocoder.readthedocs.org/providers/GeoOttawa.html
+[GeocodeFarm-Policy]: https://geocode.farm/geocoding/free-api-documentation/
+[GeocodeFarm]: https://geocode.farm/
+[Geocoder.ca]: http://geocoder.readthedocs.org/providers/Geocoder-ca.html
 [Gisgraphy]: https://premium.gisgraphy.com/
+[Google]: http://geocoder.readthedocs.org/providers/Google.html
+[HERE]: http://geocoder.readthedocs.org/providers/HERE.html
+[IP-Plans]: http://ipinfo.io/pricing
+[IPInfo]: http://geocoder.readthedocs.org/providers/IPInfo.html
+[Komoot]: http://photon.komoot.de
+[LocationIQ]: http://geocoder.readthedocs.org/providers/LocationIQ.html
+[MapQuest]: http://geocoder.readthedocs.org/providers/MapQuest.html
+[Mapbox]: http://geocoder.readthedocs.org/providers/Mapbox.html
+[Mapzen]: https://mapzen.com/blog/shutdown
+[MaxMind]: http://geocoder.readthedocs.org/providers/MaxMind.html
+[OpenCage]: http://geocoder.readthedocs.org/providers/OpenCage.html
+[OpenStreetMap-Policy]: https://operations.osmfoundation.org/policies/nominatim/
+[OpenStreetMap]: http://geocoder.readthedocs.org/providers/OpenStreetMap.html
+[TGOS]: http://geocoder.readthedocs.org/providers/TGOS.html
+[Tamu]: http://geoservices.tamu.edu/Services/Geocode/WebService/
+[TomTom]: http://geocoder.readthedocs.org/providers/TomTom.html
+[USCensus]: https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html
+[What3Words]: http://geocoder.readthedocs.org/providers/What3Words.html
+[Yahoo]: http://geocoder.readthedocs.org/providers/Yahoo.html
+[Yandex]: http://geocoder.readthedocs.org/providers/Yandex.html
