@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # coding: utf8
-from __future__ import absolute_import
 
 import csv
 import io

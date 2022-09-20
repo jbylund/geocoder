@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # coding: utf8
 
-from __future__ import absolute_import
 
 from geocoder.arcgis import ArcgisQuery
 from geocoder.arcgis_reverse import ArcgisReverse

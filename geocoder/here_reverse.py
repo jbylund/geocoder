@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # coding: utf8
 
-from __future__ import absolute_import
 
 from geocoder.here import HereQuery, HereResult
 from geocoder.location import Location

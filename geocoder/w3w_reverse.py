@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # coding: utf8
 
-from __future__ import absolute_import
 
 from geocoder.w3w import W3WQuery, W3WResult
 
