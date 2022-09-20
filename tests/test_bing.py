@@ -74,14 +74,14 @@ def test_bing_batch_reverse():
     g = geocoder.bing(locations_reverse, method="batch_reverse")
     assert g.ok
     assert len(g) == 2
-    assert [result.city for result in g] == ["New York", "Paris"]
+    assert [result.city for result in g] == ["Manhattan Valley", "Paris"]
 
 
 def test_multi_results():
-    g = geocoder.bing(location, maxRows=3)
+    g = geocoder.bing("Springfield, USA", maxRows=3)
 
-    assert len(g) == 2
-    assert g.city == city
+    assert len(g) == 3
+    assert g.city == "Springfield"
 
-    expected_results = [[45.4217796325684, -75.6911926269531], [45.2931327819824, -75.7756805419922]]
+    expected_results = [[39.79935837, -89.64362335], [37.21552277, -93.2923584], [42.10205078, -72.58575439]]
     assert [result.latlng for result in g] == expected_results
