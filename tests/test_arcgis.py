@@ -2,7 +2,7 @@
 # coding: utf8
 import geocoder
 
-location = 'Ottawa, Ontario'
+location = "Ottawa, Ontario"
 ottawa = (45.4215296, -75.6971930)
 
 
@@ -15,17 +15,13 @@ def test_arcgis():
 
 
 def test_arcgis_reverse():
-    g = geocoder.arcgis(ottawa, method='reverse')
+    g = geocoder.arcgis(ottawa, method="reverse")
     assert g.ok
 
 
 def test_multi_results():
-    g = geocoder.arcgis(location, maxRows='5')
+    g = geocoder.arcgis("Springfield, USA", maxRows=5)
     assert len(g) == 5
 
-    expected_results = [
-        'Ottawa, Ontario',
-        'Ottawa, Ontario',
-        'Ontario, Oklahoma'
-    ]
+    expected_results = ["Springfield, Illinois", "Springfield, Missouri", "Springfield, Massachusetts"]
     assert [result.address for result in g][:3] == expected_results

@@ -2,8 +2,8 @@
 
 import geocoder
 
-location = 'Ottawa'
-coordinates = {'lat': 41.005407, 'lng': 28.978349}
+location = "Ottawa"
+coordinates = {"lat": 41.005407, "lng": 28.978349}
 
 
 def test_yandex():
@@ -12,7 +12,7 @@ def test_yandex():
 
 
 def test_yandex_reverse():
-    g = geocoder.yandex(coordinates, method='reverse')
+    g = geocoder.yandex(coordinates, method="reverse")
     assert g.ok
 
 

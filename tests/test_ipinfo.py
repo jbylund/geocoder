@@ -3,7 +3,7 @@
 
 import geocoder
 
-location = '99.240.181.199'
+location = "99.240.181.199"
 
 
 def test_ipinfo():

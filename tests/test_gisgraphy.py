@@ -3,7 +3,7 @@
 
 import geocoder
 
-location = 'Ottawa, Ontario'
+location = "Ottawa, Ontario"
 ottawa = (45.4215296, -75.6971930)
 
 
@@ -19,12 +19,12 @@ def test_gisgraphy():
 def test_gisgraphy_multi_result():
     print(geocoder.komoot)
     print(geocoder.gisgraphy)
-    
+
     g = geocoder.gisgraphy(location, maxRows=3, timeout=10)
     assert g.ok
     assert len(g) == 3
 
 
 def test_gisgraphy_reverse():
-    g = geocoder.gisgraphy(ottawa, method='reverse', timeout=10)
+    g = geocoder.gisgraphy(ottawa, method="reverse", timeout=10)
     assert g.ok

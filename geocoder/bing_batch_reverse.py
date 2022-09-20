@@ -10,12 +10,11 @@ import sys
 
 PY2 = sys.version_info < (3, 0)
 csv_io = io.BytesIO if PY2 else io.StringIO
-csv_encode = (lambda input: input) if PY2 else (lambda input: input.encode('utf-8'))
-csv_decode = (lambda input: input) if PY2 else (lambda input: input.decode('utf-8'))
+csv_encode = (lambda input: input) if PY2 else (lambda input: input.encode("utf-8"))
+csv_decode = (lambda input: input) if PY2 else (lambda input: input.decode("utf-8"))
 
 
 class BingBatchReverseResult(BingBatchResult):
-
     @property
     def address(self):
         address = self._content
@@ -52,9 +51,9 @@ class BingBatchReverseResult(BingBatchResult):
 
     def debug(self, verbose=True):
         with csv_io() as output:
-            print('\n', file=output)
-            print('Bing Batch result\n', file=output)
-            print('-----------\n', file=output)
+            print("\n", file=output)
+            print("Bing Batch result\n", file=output)
+            print("-----------\n", file=output)
             print(self._content, file=output)
 
             if verbose:
@@ -65,22 +64,24 @@ class BingBatchReverseResult(BingBatchResult):
 
 class BingBatchReverse(BingBatch):
 
-    method = 'batch_reverse'
+    method = "batch_reverse"
     _RESULT_CLASS = BingBatchReverseResult
 
     def generate_batch(self, locations):
         out = csv_io()
         writer = csv.writer(out)
-        writer.writerow([
-            'Id',
-            'ReverseGeocodeRequest/Location/Latitude',
-            'ReverseGeocodeRequest/Location/Longitude',
-            'GeocodeResponse/Address/FormattedAddress',
-            'GeocodeResponse/Address/Locality',
-            'GeocodeResponse/Address/PostalCode',
-            'GeocodeResponse/Address/AdminDistrict',
-            'GeocodeResponse/Address/CountryRegion'
-        ])
+        writer.writerow(
+            [
+                "Id",
+                "ReverseGeocodeRequest/Location/Latitude",
+                "ReverseGeocodeRequest/Location/Longitude",
+                "GeocodeResponse/Address/FormattedAddress",
+                "GeocodeResponse/Address/Locality",
+                "GeocodeResponse/Address/PostalCode",
+                "GeocodeResponse/Address/AdminDistrict",
+                "GeocodeResponse/Address/CountryRegion",
+            ]
+        )
 
         for idx, location in enumerate(locations):
             writer.writerow([idx, location[0], location[1], None, None, None, None, None])
@@ -95,17 +96,17 @@ class BingBatchReverse(BingBatch):
 
         rows = {}
         for row in csv.DictReader(result):
-            rows[row['Id']] = [
-                row['GeocodeResponse/Address/FormattedAddress'],
-                row['GeocodeResponse/Address/Locality'],
-                row['GeocodeResponse/Address/PostalCode'],
-                row['GeocodeResponse/Address/AdminDistrict'],
-                row['GeocodeResponse/Address/CountryRegion']
+            rows[row["Id"]] = [
+                row["GeocodeResponse/Address/FormattedAddress"],
+                row["GeocodeResponse/Address/Locality"],
+                row["GeocodeResponse/Address/PostalCode"],
+                row["GeocodeResponse/Address/AdminDistrict"],
+                row["GeocodeResponse/Address/CountryRegion"],
             ]
 
         return rows
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     g = BingBatchReverse([(40.7943, -73.970859), (48.845580, 2.321807)], key=None)
     g.debug()

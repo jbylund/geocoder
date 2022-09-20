@@ -38,9 +38,9 @@ def test_entry_points():
 
 
 def test_location():
-    g = geocoder.location('45.4215296, -75.6971931')
+    g = geocoder.location("45.4215296, -75.6971931")
     assert g.ok
-    g = geocoder.location({'lat': 45.4215296, 'lng': -75.6971931})
+    g = geocoder.location({"lat": 45.4215296, "lng": -75.6971931})
     assert g.ok
     g = geocoder.location([45.4215296, -75.6971931])
     assert g.ok

@@ -2,7 +2,7 @@
 # coding: utf8
 import geocoder
 
-location = 'index.home.raft'
+location = "index.home.raft"
 ottawa = (45.4215296, -75.6971930)
 
 
@@ -15,5 +15,5 @@ def test_w3w():
 
 
 def test_w3w_reverse():
-    g = geocoder.w3w(ottawa, method='reverse')
+    g = geocoder.w3w(ottawa, method="reverse")
     assert g.ok

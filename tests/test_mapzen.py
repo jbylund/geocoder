@@ -3,7 +3,7 @@ import pytest
 
 import geocoder
 
-location = 'Ottawa'
+location = "Ottawa"
 
 
 def test_mapzen():
@@ -13,7 +13,7 @@ def test_mapzen():
 
 def test_mapzen_reverse():
     with pytest.raises(DeprecationWarning) as e:
-        g = geocoder.mapzen("45.4049053 -75.7077965", method='reverse')
+        g = geocoder.mapzen("45.4049053 -75.7077965", method="reverse")
 
 
 def test_multi_results():
