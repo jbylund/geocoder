@@ -61,15 +61,15 @@ def test_opencage_address():
     """Expected result :
     https://api.opencagedata.com/geocode/v1/json?q=The+Happy+Goat,+Ottawa&key=YOUR-API-KEY
     """
-    g = geocoder.opencage(address)
+    g = geocoder.opencage("6260 Santa Monica Blvd, Los Angeles, CA 90038")
     assert g.ok
-    assert g.country == "Canada"
-    assert g.state == "Ontario"
-    assert g.state_code == "ON"
-    assert g.city == "Ottawa"
-    assert g.street == "Wilbrod Street"
-    assert g.housenumber == "317"
-    assert g.postal.startswith("K1N")
+    assert g.country == "United States"
+    assert g.state == "California"
+    assert g.state_code == "CA"
+    assert g.city == "Los Angeles"
+    assert g.street == "Santa Monica Boulevard"
+    assert g.housenumber == "6260"
+    assert g.postal == "90038"
     assert g.remaining_api_calls > 0 and g.remaining_api_calls != 999999
     assert g.limit_api_calls > 0 and g.remaining_api_calls != 999999
 
