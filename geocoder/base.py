@@ -1,52 +1,27 @@
 #!/usr/bin/python
 # coding: utf8
 from __future__ import absolute_import, print_function
+
+import functools
+import json
+import logging
+import sys
 from builtins import str
+from collections import OrderedDict
+from collections.abc import MutableSequence
+from io import StringIO
+from urllib.parse import urlparse
 
 import requests
-import sys
-import json
-import six
-import logging
-from io import StringIO
-from collections import OrderedDict
-
-is_python2 = sys.version_info < (3, 0)
-
-if is_python2:
-    # python 2.7
-    from urlparse import urlparse
-
-    class MutableSequence(object):
-        def index(self, v, **kwargs):
-            return self._list.index(v, **kwargs)  # noqa
-
-        def count(self, v):
-            return self._list.count(v)  # noqa
-
-        def pop(self, i=-1):
-            return self._list.pop(i)  # noqa
-
-        def remove(self, v):
-            self._list.remove(v)  # noqa
-
-        def __iter__(self):
-            return iter(self._list)  # noqa
-
-        def __contains__(self, v):
-            return self._list.__contains__(v)  # noqa
-
-        def __eq__(self, other):
-            return self._list == other  # noqa
-
-else:
-    # python >3.3
-    from collections.abc import MutableSequence
-    from urllib.parse import urlparse
 
 from geocoder.distance import Distance  # noqa
 
 LOGGER = logging.getLogger(__name__)
+
+
+@functools.lru_cache(maxsize=None)
+def get_session():
+    return requests.Session()
 
 
 class OneResult(object):
@@ -173,7 +148,7 @@ class OneResult(object):
     def __repr__(self):
         """Display [address] if available; [lat,lng] otherwise"""
         if self.address:
-            return "[{0}]".format(six.text_type(self.address))
+            return "[{0}]".format(str(self.address))
         else:
             return "[{0},{1}]".format(self.lat, self.lng)
 
@@ -442,7 +417,7 @@ class MultipleResultsQuery(MutableSequence):
         self.encoding = kwargs.get("encoding", "utf-8")
         self.timeout = kwargs.get("timeout", self._TIMEOUT)
         self.proxies = kwargs.get("proxies", "")
-        self.session = kwargs.get("session", requests.Session())
+        self.session = kwargs.get("session", get_session())
         # headers can be overriden in _build_headers
         self.headers = self._build_headers(provider_key, **kwargs).copy()
         self.headers.update(kwargs.get("headers", {}))

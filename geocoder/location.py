@@ -2,8 +2,10 @@
 # coding: utf8
 
 import re
-import geocoder
+
 from six import string_types
+
+import geocoder
 
 try:
     from statistics import mean

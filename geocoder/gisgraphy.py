@@ -5,7 +5,7 @@ from __future__ import absolute_import
 
 import logging
 
-from geocoder.base import OneResult, MultipleResultsQuery
+from geocoder.base import MultipleResultsQuery, OneResult
 
 
 class GisgraphyResult(OneResult):
@@ -67,10 +67,11 @@ class GisgraphyQuery(MultipleResultsQuery):
         return {"Referer": "https://services.gisgraphy.com", "User-agent": "geocoder-converter"}
 
     def _build_params(self, location, provider_key, **kwargs):
+        # apikey ?
         return {
             "address": location,
-            "limitnbresult": kwargs.get("maxRows", 1),
             "format": "json",
+            "limitnbresult": kwargs.get("maxRows", 1),
         }
 
     def _adapt_results(self, json_response):

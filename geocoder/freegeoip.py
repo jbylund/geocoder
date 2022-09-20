@@ -4,10 +4,12 @@
 from __future__ import absolute_import
 
 import logging
-import requests
-import ratelim
 
-from geocoder.base import OneResult, MultipleResultsQuery
+import ratelim
+import requests
+
+from geocoder.base import MultipleResultsQuery, OneResult
+from geocoder.keys import freegeoip_key
 
 
 class FreeGeoIPResult(OneResult):
@@ -113,8 +115,10 @@ class FreeGeoIPQuery(MultipleResultsQuery):
     method = "geocode"
 
     _URL = "https://freegeoip.net/json/"
+    _URL = "http://api.ipstack.com/"
     _RESULT_CLASS = FreeGeoIPResult
-    _KEY_MANDATORY = False
+    _KEY_MANDATORY = True
+    _KEY = freegeoip_key
 
     def _before_initialize(self, location, **kwargs):
         self.url += location
@@ -126,6 +130,12 @@ class FreeGeoIPQuery(MultipleResultsQuery):
 
     def _adapt_results(self, json_response):
         return [json_response]
+
+    def _build_params(self, location, provider_key, **kwargs):
+        return {
+            "format": 1,
+            "access_key": provider_key,
+        }
 
 
 if __name__ == "__main__":
