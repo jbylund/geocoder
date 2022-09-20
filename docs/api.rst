@@ -27,7 +27,7 @@ Installing the latest version from GitHub:
 
 .. code-block:: bash
 
-    $ git clone https://github.com/DenisCarriere/geocoder
+    $ git clone https://github.com/jbylund/geocoder
     $ cd geocoder
     $ python setup.py install
 
@@ -124,7 +124,7 @@ Using a Session
 ---------------
 
 In case you have several addresses to encode, to use persistent HTTP connection as recommended by the request-library
-http://docs.python-requests.org/en/master/user/advanced/#session-objects
+http://docs.python-requests.org/en/main/user/advanced/#session-objects
 you might use the following:
 
 

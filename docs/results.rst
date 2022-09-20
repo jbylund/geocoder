@@ -18,7 +18,7 @@ As for now, Geocoder always returns one result: the best match according to the 
     ...
 
 
-A **Work** is **In Progress** to support multiple results (you will find which providers support this feature on the `README file <https://github.com/DenisCarriere/geocoder/blob/master/README.md>`_).
+A **Work** is **In Progress** to support multiple results (you will find which providers support this feature on the `README file <https://github.com/jbylund/geocoder/blob/main/README.md>`_).
 
 If you would like to contribute and extend your favorite provider, please refer to the :ref:`Refactoring guide <wip_guide>`
 

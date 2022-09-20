@@ -182,4 +182,4 @@ Please have a look on the providers already "migrated", like
 * mapbox
 * mapquest
 
-The full list is available on the `README <https://github.com/DenisCarriere/geocoder/blob/master/README.md>`_ 
+The full list is available on the `README <https://github.com/jbylund/geocoder/blob/main/README.md>`_ 

@@ -32,8 +32,8 @@ extensions = ["sphinx.ext.autodoc", "sphinx.ext.intersphinx"]
 
 
 # 'releases' (changelog) settings
-releases_issue_uri = "https://github.com/DenisCarriere/geocoder/issues/%s"
-releases_release_uri = "https://github.com/DenisCarriere/geocoder/tree/%s"
+releases_issue_uri = "https://github.com/jbylund/geocoder/issues/%s"
+releases_release_uri = "https://github.com/jbylund/geocoder/tree/%s"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]

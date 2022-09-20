@@ -1,7 +1,7 @@
 <!-- markdownlint-disable -->
 <h1 align="center" style="margin:1em">
   <a href="https://geocoder.readthedocs.org/">
-    <img src="https://github.com/DenisCarriere/geocoder/raw/master/docs/_static/geocoder.png"
+    <img src="https://github.com/jbylund/geocoder/raw/main/docs/_static/geocoder.png"
          alt="Markdownify"
          width="200"></a>
   <br />
@@ -21,16 +21,16 @@
     <img src="https://img.shields.io/pypi/v/geocoder.svg"
          alt="PyPi">
   </a>
-  <a href="https://build.snapcraft.io/user/DenisCarriere/geocoder">
-    <img src="https://build.snapcraft.io/badge/DenisCarriere/geocoder.svg"
+  <a href="https://build.snapcraft.io/user/jbylund/geocoder">
+    <img src="https://build.snapcraft.io/badge/jbylund/geocoder.svg"
          alt="Snap">
   </a>
-  <a href="https://travis-ci.org/DenisCarriere/geocoder">
-    <img src="https://travis-ci.org/DenisCarriere/geocoder.svg?branch=master"
+  <a href="https://travis-ci.org/jbylund/geocoder">
+    <img src="https://travis-ci.org/jbylund/geocoder.svg?branch=master"
          alt="Travis">
   </a>
-  <a href="https://codecov.io/gh/DenisCarriere/geocoder">
-    <img src="https://codecov.io/gh/DenisCarriere/geocoder/branch/master/graph/badge.svg"
+  <a href="https://codecov.io/gh/jbylund/geocoder">
+    <img src="https://codecov.io/gh/jbylund/geocoder/branch/main/graph/badge.svg"
          alt="Codecov" />
   </a>
 </p>
@@ -248,7 +248,7 @@ $ pip install geocoder
 Installing the latest version from Github:
 
 ```bash
-$ git clone https://github.com/DenisCarriere/geocoder
+$ git clone https://github.com/jbylund/geocoder
 ...
 $ cd geocoder
 $ python setup.py install
@@ -282,7 +282,7 @@ Speak up on Twitter [@DenisCarriere](https://twitter.com/DenisCarriere) and tell
 
 ## Contribution
 
-If you find any bugs or any enhancements to recommend please send some of your comments/suggestions to the [Github Issues Page](https://github.com/DenisCarriere/geocoder/issues).
+If you find any bugs or any enhancements to recommend please send some of your comments/suggestions to the [Github Issues Page](https://github.com/jbylund/geocoder/issues).
 
 Some way to contribute, from the most generic to the most detailed:
 

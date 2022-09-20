@@ -27,8 +27,8 @@ setup(
     long_description=readme,
     author="Denis Carriere",
     author_email="carriere.denis@gmail.com",
-    url="https://github.com/DenisCarriere/geocoder",
-    download_url="https://github.com/DenisCarriere/geocoder",
+    url="https://github.com/jbylund/geocoder",
+    download_url="https://github.com/jbylund/geocoder",
     license="The MIT License",
     entry_points="""
         [console_scripts]
