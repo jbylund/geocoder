@@ -14,8 +14,6 @@ A simple and consistent geocoding library for python.
 - [Installation](#installation)
     - [PyPi Install](#pypi-install)
     - [GitHub Install](#github-install)
-    - [Snap Install](#snap-install)
-- [Feedback](#feedback)
 - [Contribution](#contribution)
     - [Documenting](#documenting)
     - [Coding](#coding)
